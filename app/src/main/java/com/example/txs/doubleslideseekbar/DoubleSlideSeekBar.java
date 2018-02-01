@@ -54,11 +54,11 @@ public class DoubleSlideSeekBar extends View {
      */
     private boolean isUpperMoving;
     /**
-     * 字的大小 100$
+     * 字的大小 100元
      */
     private int textSize;
     /**
-     * 字的颜色 100$
+     * 字的颜色 100元
      */
     private int textColor;
     /**
@@ -309,15 +309,7 @@ public class DoubleSlideSeekBar extends View {
         int mode = MeasureSpec.getMode(widthMeasureSpec);
         int size = MeasureSpec.getSize(widthMeasureSpec);
         if (mode == MeasureSpec.EXACTLY) {
-            // match parent 或者 固定大小 此时可以获取线（进度条）的长度
-            lineLength = size - paddingLeft - paddingRight - bitmapWidth;
-            //线（进度条）的结束位置
-            lineEnd = lineLength + paddingLeft + bitmapWidth / 2;
-            //线（进度条）的开始位置
-            lineStart = paddingLeft + bitmapWidth / 2;
-            //初始化 游标位置
-            slideBigX = lineEnd;
-            slideLowX = lineStart;
+
             size = Math.max(size, paddingLeft + paddingRight + bitmapWidth * 2);
 
         } else {
@@ -325,6 +317,15 @@ public class DoubleSlideSeekBar extends View {
             int width = paddingLeft + paddingRight + bitmapWidth * 2;
             size = Math.min(size, width);
         }
+        // match parent 或者 固定大小 此时可以获取线（进度条）的长度
+        lineLength = size - paddingLeft - paddingRight - bitmapWidth;
+        //线（进度条）的结束位置
+        lineEnd = lineLength + paddingLeft + bitmapWidth / 2;
+        //线（进度条）的开始位置
+        lineStart = paddingLeft + bitmapWidth / 2;
+        //初始化 游标位置
+        slideBigX = lineEnd;
+        slideLowX = lineStart;
         return size;
     }
 
@@ -378,7 +379,7 @@ public class DoubleSlideSeekBar extends View {
         float nowY = event.getY();
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                //按下 在线（进度条）范围上
+                //按下 在游标范围上
                 boolean rightY = Math.abs(nowY - lineY) < bitmapHeight / 2;
                 //按下 在左边游标上
                 boolean lowSlide = Math.abs(nowX - slideLowX) < bitmapWidth / 2;

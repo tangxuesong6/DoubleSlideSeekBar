@@ -2,9 +2,9 @@
 <resources>
     <!--线（进度条）宽度-->
     <attr name="lineHeight" format="dimension" />
-    <!--字的大小 100$-->
+    <!--字的大小 100元-->
     <attr name="textSize" format="dimension" />
-    <!--字的颜色 100$-->
+    <!--字的颜色 100元-->
     <attr name="textColor" format="color" />
     <!--两个游标内部 线（进度条）的颜色-->
     <attr name="inColor" format="color" />
@@ -59,6 +59,4 @@
         <attr name="bigValue" />
         <attr name="smallValue" />
     </declare-styleable>
-
-
 </resources>
