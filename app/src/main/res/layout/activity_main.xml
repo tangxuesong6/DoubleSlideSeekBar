@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.txs.doubleslideseekbar.MainActivity">
+    <com.example.txs.doubleslideseekbar.DoubleSlideSeekBar
+        android:id="@+id/doubleslide_withrule"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:lineHeight="6dp"
+        custom:textSize="12sp"
+        custom:textColor="#0628e4"
+        custom:inColor="#f10a0a"
+        custom:outColor="#af08e2"
+        custom:imageLow="@mipmap/imgv_slide"
+        custom:imageBig="@mipmap/imgv_slide"
+        custom:imagewidth="20dp"
+        custom:imageheight="20dp"
+        custom:hasRule="true"
+        custom:ruleColor="#0e0e0e"
+        custom:ruleTextColor="#f74104"
+        custom:unit="元"
+        custom:equal="10"
+        custom:ruleUnit="$"
+        custom:ruleTextSize="8sp"
+        custom:ruleLineHeight="10dp"
+        />
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_min_rule"
+            android:text="最小值 "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_max_rule"
+            android:gravity="right"
+            android:text="最大值 "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <com.example.txs.doubleslideseekbar.DoubleSlideSeekBar
+        android:id="@+id/doubleslide_withoutrule"
+        android:layout_marginTop="40dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        custom:lineHeight="20dp"
+        custom:textSize="16sp"
+        custom:textColor="#e40627"
+        custom:inColor="#0a40f1"
+        custom:outColor="#ace208"
+        custom:imageLow="@mipmap/imgv_slide"
+        custom:imageBig="@mipmap/imgv_slide"
+        custom:imagewidth="20dp"
+        custom:imageheight="20dp"
+        custom:hasRule="false"
+        custom:bigValue="1000"
+        custom:smallValue="0"
+        />
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_min_without_rule"
+            android:text="最小值 "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_max_without_rule"
+            android:gravity="right"
+            android:text="最大值 "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</LinearLayout>
